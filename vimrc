@@ -1,6 +1,6 @@
 set nocompatible
 
-set number
+" set number
 set ruler
 syntax on
 
@@ -95,3 +95,27 @@ color desert
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+" opsb customisations
+set hidden
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+
+set gfn=Monaco:h13·
+vmap <D-S-Up> :m-2<CR>gv
+vmap <D-S-Down> :m'>+<CR>gv
+
+color vibrantink
+if has("gui_macvim")
+  macmenu &File.New\ Tab key=<nop>
+  map <D-t> :CommandT<CR>
+endif
+

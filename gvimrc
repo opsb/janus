@@ -133,3 +133,4 @@ call s:DefineCommand("e", "Edit")
 if filereadable(expand("~/.gvimrc.local"))
   source ~/.gvimrc.local
 endif
+color vibrantink
