@@ -26,7 +26,9 @@ set laststatus=2
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
+map <Leader>b :NERDTreeToggle<CR>
+map <Leader>n :NERDTreeToggle<CR>:NERDTreeToggle<CR>
+map <D-r> :NERDTreeFind<CR>
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
@@ -116,6 +118,6 @@ vmap <D-S-Down> :m'>+<CR>gv
 color vibrantink
 if has("gui_macvim")
   macmenu &File.New\ Tab key=<nop>
-  map <D-t> :CommandT<CR>
+"  map <D-t> :CommandT<CR>
 endif
 
